@@ -1,0 +1,36 @@
+CREATE TABLE Livro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    ano_publicacao INT,
+    genero VARCHAR(100)
+);
+
+CREATE TABLE Autor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    nacionalidade VARCHAR(100)
+);
+
+CREATE TABLE Leitor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE Emprestimo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    livro_id INT NOT NULL,
+    leitor_id INT NOT NULL,
+    data_emprestimo DATE,
+    data_devolucao DATE,
+    FOREIGN KEY (livro_id) REFERENCES Livro(id),
+    FOREIGN KEY (leitor_id) REFERENCES Leitor(id)
+);
+
+CREATE TABLE Livro_Autor (
+    livro_id INT NOT NULL,
+    autor_id INT NOT NULL,
+    PRIMARY KEY (livro_id, autor_id),
+    FOREIGN KEY (livro_id) REFERENCES Livro(id),
+    FOREIGN KEY (autor_id) REFERENCES Autor(id)
+);
