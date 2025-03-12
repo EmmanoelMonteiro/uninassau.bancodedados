@@ -162,12 +162,12 @@ INSERT INTO Emprestimo (livro_id, leitor_id, data_emprestimo, data_devolucao) VA
 (7, 7, '2024-07-15', '2024-07-25'),
 (8, 8, '2024-08-05', '2024-08-15'),
 (9, 9, '2024-09-10', '2024-09-20'),
-(10, 10, '2024-10-01', '2024-10-11'),
+(10, 10, '2024-10-01', '2024-10-11');
 -- (adicionar mais registros conforme necessário).
 
 -- Inserindo dados na tabela Livro_Autor (exemplo de vários autores para um livro)
 INSERT INTO Livro_Autor (livro_id, autor_id) VALUES
 (1, 1), (1, 2), (2, 3), (3, 4),
 (4, 5), (4, 6), (5, 7), (6, 8),
-(7, 9), (8, 10), (9, 11), (10, 12),
+(7, 9), (8, 10), (9, 11), (10, 12);
 -- (adicionar mais registros conforme necessário, mantendo no máximo 4 autores por livro).
