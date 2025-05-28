@@ -1,0 +1,40 @@
+// 1. Livros disponíveis com mais de 300 páginas
+db.livros.find({ 
+  disponivel: true,
+  paginas: { $gt: 300 }
+})
+
+// 2. Livros de George Orwell ou publicados antes de 1950
+db.livros.find({
+  $or: [
+    { autor: "George Orwell" },
+    { ano: { $lt: 1950 } }
+  ]
+})
+
+// 3. Livros de Fantasia que não estão disponíveis
+db.livros.find({
+  generos: "Fantasia",
+  disponivel: false
+})
+
+// 4. Livros com campo 'editora' existente
+db.livros.find({ 
+  editora: { $exists: true } 
+})
+
+// 5. Livros entre 250 e 350 páginas
+db.livros.find({ 
+  paginas: { $gte: 250, $lte: 350 } 
+})
+
+// 6. Busca por título usando regex
+db.livros.find({ 
+  titulo: { $regex: /code/i } 
+})
+
+// 7. Livros com exatamente 2 gêneros
+db.livros.find({
+  "generos.1": { $exists: true },
+  "generos.2": { $exists: false }
+})

@@ -1,0 +1,95 @@
+db.livros.insertMany([
+  {
+    _id: 1,
+    titulo: "Dom Casmurro",
+    autor: "Machado de Assis",
+    ano: 1899,
+    generos: ["Romance", "Realismo"],
+    disponivel: true,
+    paginas: 256
+  },
+  {
+    _id: 2,
+    titulo: "1984",
+    autor: "George Orwell",
+    ano: 1949,
+    generos: ["Ficção Distópica", "Política"],
+    disponivel: false,
+    paginas: 328,
+    editora: "Companhia das Letras"
+  },
+  {
+    _id: 3,
+    titulo: "O Senhor dos Anéis: A Sociedade do Anel",
+    autor: "J.R.R. Tolkien",
+    ano: 1954,
+    generos: ["Fantasia", "Aventura"],
+    disponivel: true,
+    paginas: 576
+  },
+  {
+    _id: 4,
+    titulo: "Cem Anos de Solidão",
+    autor: "Gabriel García Márquez",
+    ano: 1967,
+    generos: ["Realismo Mágico", "Ficção Latino-Americana"],
+    disponivel: true,
+    paginas: 420
+  },
+  {
+    _id: 5,
+    titulo: "Harry Potter e a Pedra Filosofal",
+    autor: "J.K. Rowling",
+    ano: 1997,
+    generos: ["Fantasia", "Infanto-Juvenil"],
+    disponivel: false,
+    paginas: 264
+  },
+  {
+    _id: 6,
+    titulo: "O Pequeno Príncipe",
+    autor: "Antoine de Saint-Exupéry",
+    ano: 1943,
+    generos: ["Fábula", "Literatura Infantil"],
+    disponivel: true,
+    paginas: 96,
+    edicao_especial: true
+  },
+  {
+    _id: 7,
+    titulo: "A Revolução dos Bichos",
+    autor: "George Orwell",
+    ano: 1945,
+    generos: ["Sátira Política", "Ficção Alegórica"],
+    disponivel: true,
+    paginas: 152
+  },
+  {
+    _id: 8,
+    titulo: "O Hobbit",
+    autor: "J.R.R. Tolkien",
+    ano: 1937,
+    generos: ["Fantasia", "Aventura"],
+    disponivel: false,
+    paginas: 310
+  },
+  {
+    _id: 9,
+    titulo: "Neuromancer",
+    autor: "William Gibson",
+    ano: 1984,
+    generos: ["Cyberpunk", "Ficção Científica"],
+    disponivel: true,
+    paginas: 271
+  },
+  {
+    _id: 10,
+    titulo: "Clean Code",
+    autor: "Robert C. Martin",
+    ano: 2008,
+    generos: ["Programação", "Tecnologia"],
+    disponivel: true,
+    paginas: 464,
+    isbn: "9780132350884"
+  }
+])
